@@ -1,6 +1,7 @@
 package dds.QMP;
 
-import java.util.ArrayList;
+import dds.API.AccuWeatherAPI;
+
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;

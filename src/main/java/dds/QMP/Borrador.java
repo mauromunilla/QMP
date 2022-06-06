@@ -1,5 +1,7 @@
 package dds.QMP;
 
+import dds.Exception.PrendaInvalidaException;
+
 public class Borrador {
   Tipo tipo;
   Material material;
@@ -19,7 +21,7 @@ public class Borrador {
     this.material = material;
   }
 
-  void especificarMaterial(Trama trama) {
+  void especificarTrama(Trama trama) {
     validarNoNulo(trama, "La trama de la prenda falta ser informada.");
     this.trama = trama == null ? Trama.LISA : trama ;
   }

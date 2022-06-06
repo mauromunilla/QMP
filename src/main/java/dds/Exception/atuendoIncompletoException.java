@@ -1,4 +1,4 @@
-package dds.QMP;
+package dds.Exception;
 
 public class atuendoIncompletoException extends RuntimeException {
   public atuendoIncompletoException(String causa) {

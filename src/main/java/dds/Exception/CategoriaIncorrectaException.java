@@ -1,4 +1,4 @@
-package dds.QMP;
+package dds.Exception;
 
 public class CategoriaIncorrectaException extends RuntimeException {
   public CategoriaIncorrectaException(String causa) {

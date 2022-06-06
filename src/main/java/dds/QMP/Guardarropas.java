@@ -1,5 +1,8 @@
 package dds.QMP;
 
+import dds.Exception.atuendoIncompletoException;
+import dds.Exception.noSeEncuentraEnLaListaException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +18,13 @@ class Guardarropas {
       throw new atuendoIncompletoException("No se cargaron las prendas necesarias");
     }
     atuendos.add(atuendo);
+  }
+
+  void quitarAtuendo(Atuendo atuendo) {
+    if(!atuendos.contains(atuendo)) {
+      throw new noSeEncuentraEnLaListaException("No se encuentra en la lista");
+    }
+    this.atuendos.remove(atuendo);
   }
 
   List<Atuendo> obtenerAtuendos() {

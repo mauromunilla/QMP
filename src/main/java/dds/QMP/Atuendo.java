@@ -1,5 +1,7 @@
 package dds.QMP;
 
+import dds.Exception.CategoriaIncorrectaException;
+
 import java.util.ArrayList;
 import java.util.List;
 
