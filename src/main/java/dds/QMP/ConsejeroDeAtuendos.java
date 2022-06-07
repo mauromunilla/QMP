@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 public class ConsejeroDeAtuendos {
   AccuWeatherAPI apiClima = new AccuWeatherAPI();
 
-
   Atuendo posibleAtuendo(Guardarropas guardarropas, String ubicacion) {
     List<Map<String, Object>> condicionesClimaticas = apiClima.getWeather(ubicacion);
     int temperatura = (int) condicionesClimaticas.get(0).get("Temperature");

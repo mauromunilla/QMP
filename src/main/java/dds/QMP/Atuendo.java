@@ -1,6 +1,7 @@
 package dds.QMP;
 
 import dds.Exception.CategoriaIncorrectaException;
+import dds.Exception.noSeEncuentraEnLaListaException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +9,18 @@ import java.util.List;
 public class Atuendo {
   List<Prenda> prendas = new ArrayList<>();
 
-  void agregarPrenda(Prenda prenda, Categoria categoria) {
+  void agregarPrenda(Prenda prenda) {
+    Categoria categoria = prenda.obtenerCategoria();
     validarCategoria(prenda, categoria, "La prenda no es de la categoría correcta");
     validarCategoriaNoRepetida(prenda, "La categoría ya forma parte del atuendo");
     prendas.add(prenda);
+  }
+
+  public void quitarPrenda(Prenda prenda) {
+    if(!prendas.contains(prenda)) {
+      throw new noSeEncuentraEnLaListaException("No se encuentra en la lista");
+    }
+    this.prendas.remove(prenda);
   }
 
   boolean atuendoListo() {
