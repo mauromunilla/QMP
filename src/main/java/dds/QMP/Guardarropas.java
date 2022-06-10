@@ -1,7 +1,6 @@
 package dds.QMP;
 
 import dds.Exception.atuendoIncompletoException;
-import dds.Exception.noSeEncuentraEnLaListaException;
 
 import java.util.ArrayList;
 import java.util.List;
